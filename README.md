@@ -7,6 +7,9 @@ Goal of this Hands On Lab is to understand:
  - what is ERD, Data Model and basic relations
  - what is the severless sql in synapse
 
+
+# Synapse & Lake Datase
+
 ## Setup environement
 
 Use cloud shell (powershell), enter the following commands to clone this repo:
@@ -253,3 +256,22 @@ SELECT \* FROM`RetailDB`.`SalesOrder`WHERE SalesOrderId = 99999
 
 1. Use the  **▷**  button on the left of the cell to run it and verify that a row for sales order 99999 was inserted into the  **SalesOrder**  table.
 2. Close the  **Notebook 1**  pane, stopping the Spark session and discarding your changes.
+
+
+# Visualize with PowerBI
+## Connect to Synapse SQL Serverless
+![image](https://user-images.githubusercontent.com/80399430/207063628-ae8ffa11-1aa9-436f-b385-473a91998889.png)
+![image](https://user-images.githubusercontent.com/80399430/207063378-2fbf3b74-064d-4c7c-bff3-fe894e6865a8.png)
+
+1. Select the three tables and Load data.
+2. Review the schema and model in PowerBI
+![image](https://user-images.githubusercontent.com/80399430/207064421-a4e63125-797a-4612-b4b7-6660b620c6b3.png)
+3. Create a simple dashboard that allow you to visualize:
+- Who are the top buyers
+- How many article each user bought
+- For each user the list of article bought with the price and quantity bought
+
+
+
+
+
