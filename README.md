@@ -47,7 +47,7 @@ A lake database is a type of database that you can define in your workspace, and
 
 Now that you have created a lake database, you can define its schema by creating tables.
 
-Define the table schema
+## Define the table schema
 
 1. Switch back to the  **RetailDB**  tab for your database definition, and in the  **+ Table**  list, select  **Custom** , and note that a new table named  **Table\_1**  is added to your database.
 2. With  **Table\_1**  selected, in the  **General**  tab under the database design canvas, change the  **Name**  property to  **Customer**.
@@ -85,17 +85,15 @@ Define the table schema
 
 1. In the main pane, switch back to the  **files**  tab, which contains the file system with the  **RetailDB**  folder. Then open the  **RetailDB**  folder and create a new folder named  **Customer**  in it. This is where the  **Customer**  table will get its data.
 2. Open the new  **Customer**  folder, which should be empty.
-3. Download the  **customer.csv**  data file from [https://raw.githubusercontent.com/MicrosoftLearning/mslearn-synapse/master/Allfiles/Labs/03/data/customer.csv](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-synapse/master/Allfiles/Labs/03/data/customer.csv) and save it in a folder on your local computer (it doesn't matter where). Then in the  **Customer**  folder in Synapse Explorer, use the  **⤒**  **Upload**  button to upload the  **customer.csv**  file to the  **RetailDB/Customer**  folder in your data lake.
+3. Download the  **customer.csv**  and upload it to the  **RetailDB/Customer**  folder in your data lake.
+4. In the  **Data**  pane on the left, on the  **Workspace**  tab, in the  **…**  menu for the  **Customer**  table, select  **New SQL script**  \>  **Select TOP 100 rows**. Then, in the new  **SQL script 1**  pane that has opened, ensure that the  **Built-in**  SQL pool is connected, and use the  **▷**  **Run**  button to run the SQL code. The results should include first 100 rows from the  **Customer**  table, based on the data stored in the underlying folder in the data lake.
+5. Close the  **SQL script 1**  tab, discarding your changes.
 
-
-1. In the  **Data**  pane on the left, on the  **Workspace**  tab, in the  **…**  menu for the  **Customer**  table, select  **New SQL script**  \>  **Select TOP 100 rows**. Then, in the new  **SQL script 1**  pane that has opened, ensure that the  **Built-in**  SQL pool is connected, and use the  **▷**  **Run**  button to run the SQL code. The results should include first 100 rows from the  **Customer**  table, based on the data stored in the underlying folder in the data lake.
-2. Close the  **SQL script 1**  tab, discarding your changes.
-
-Create a table from a database template
+## Create a table from a database template
 
 As you've seen, you can create the tables you need in your lake database from scratch. However, Azure Synapse Analytics also provides numerous database templates based on common database workloads and entities that you can use as a starting point for your database schema.
 
-Define the table schema
+## Define the table schema
 
 1. In the main pane, switch back to the  **RetailDB**  pane, which contains your database schema (currently containing only the  **Customer**  table).
 2. In the  **+ Table**  menu, select  **From template**. Then in the  **Add from template**  page, select  **Retail**  and click  **Continue**.
@@ -137,27 +135,27 @@ Define the table schema
 9. When you've modified the columns as shown above, publish the database again to save the changes.
 10. In the  **Data**  pane on the left, switch back to the  **Workspace**  tab so you can see the  **RetailDB**  lake database. Then use the  **…**  menu for its  **Tables**  folder to refresh the view and see the newly created  **Product**  table.
 
-Load data into the table's storage path
+## Load data into the table's storage path
 
 1. In the main pane, switch back to the  **files**  tab, which contains the file system, and navigate to the  **files/RetailDB**  folder, which currently contains the  **Customer**  folder for the table you created previously.
 2. In the  **RetailDB**  folder, create a new folder named  **Product**. This is where the  **Product**  table will get its data.
 3. Open the new  **Product**  folder, which should be empty.
-4. Download the  **product.csv**  data file from [https://raw.githubusercontent.com/MicrosoftLearning/mslearn-synapse/master/Allfiles/Labs/03/data/product.csv](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-synapse/master/Allfiles/Labs/03/data/product.csv) and save it in a folder on your local computer (it doesn't matter where). Then in the  **Product**  folder in Synapse Explorer, use the  **⤒**  **Upload**  button to upload the  **product.csv**  file to the  **RetailDB/Product**  folder in your data lake.
+4. Download the  **product.csv**  data file and upload it to the  **RetailDB/Product**  folder in your data lake.
 5. In the  **Data**  pane on the left, on the  **Workspace**  tab, in the  **…**  menu for the  **Product**  table, select  **New SQL script**  \>  **Select TOP 100 rows**. Then, in the new  **SQL script 1**  pane that has opened, ensure that the  **Built-in**  SQL pool is connected, and use the  **▷**  **Run**  button to run the SQL code. The results should include first 100 rows from the  **Product**  table, based on the data stored in the underlying folder in the data lake.
 6. Close the  **SQL script 1**  tab, discarding your changes.
 
-Create a table from existing data
+## Create a table from existing data
 
 So far, you've created tables and then populated them with data. In some cases, you may already have data in a data lake from which you want to derive a table.
 
-Upload data
+## Upload data
 
 1. In the main pane, switch back to the  **files**  tab, which contains the file system, and navigate to the  **files/RetailDB**  folder, which currently contains the  **Customer**  and  **Product**  folders for the tables you created previously.
 2. In the  **RetailDB**  folder, create a new folder named  **SalesOrder**.
 3. Open the new  **SalesOrder**  folder, which should be empty.
-4. Download the  **salesorder.csv**  data file from [https://raw.githubusercontent.com/MicrosoftLearning/mslearn-synapse/master/Allfiles/Labs/03/data/salesorder.csv](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-synapse/master/Allfiles/Labs/03/data/salesorder.csv) and save it in a folder on your local computer (it doesn't matter where). Then in the  **SalesOrder**  folder in Synapse Explorer, use the  **⤒**  **Upload**  button to upload the  **salesorder.csv**  file to the  **RetailDB/SalesOrder**  folder in your data lake.
+4. Download the  **salesorder.csv**  data file and upload the it to the  **RetailDB/SalesOrder**  folder in your data lake.
 
-Create a table
+## Create a table
 
 1. In the main pane, switch back to the  **RetailDB**  pane, which contains your database schema (currently containing the  **Customer**  and  **Product**  tables).
 2. In the  **+ Table**  menu, select  **From data lake**. Then in the  **Create external table from data lake**  pane, specify the following options:
@@ -202,19 +200,18 @@ Create a table
 9. Publish the database again to save the changes.
 10. In the  **Data**  pane on the left, switch back to the  **Workspace**  tab so you can see the  **RetailDB**  lake database. Then use the  **…**  menu for its  **Tables**  folder to refresh the view and see the newly created  **SalesOrder**  table.
 
-Work with lake database tables
+## Work with lake database tables
 
 Now that you have some tables in your database, you can use them to work with the underlying data.
 
-Query tables using SQL
+## Query tables using SQL
 
 1. In Synapse Studio, select the  **Develop**  page.
 2. In the  **Develop**  pane, in the  **+**  menu, select  **SQL script**.
 3. In the new  **SQL script 1**  pane, ensure the script is connected to the  **Built-in**  SQL pool and in the  **User database**  list, select  **RetailDB**.
 4. Enter the following SQL code:
 
-SqlCopy
-
+```
 SELECT o.SalesOrderID, c.EmailAddress, p.ProductName, o.Quantity
 
 FROM SalesOrder AS o
@@ -222,6 +219,7 @@ FROM SalesOrder AS o
 JOIN Customer AS c ON o.CustomerId = c.CustomerId
 
 JOIN Product AS p ON o.ProductId = p.ProductId
+```
 
 1. Use the  **▷**  **Run**  button to run the SQL code.
 
@@ -229,27 +227,29 @@ The results show order details with customer and product information.
 
 1. Close the  **SQL script 1**  pane, discarding your changes.
 
-Insert data using Spark
+## Insert data using Spark
 
 1. In the  **Develop**  pane, in the  **+**  menu, select  **Notebook**.
 2. In the new  **Notebook 1**  pane, attach the notebook to the  **spark** _ **xxxxxxx** _\* Spark pool.
 3. Enter the following code in the empty notebook cell:
 
-CodeCopy
+```
 
 %%sql
 
 INSERTINTO`RetailDB`.`SalesOrder`VALUES (99999, '2022-01-01', 1, 6, 5, 1)
+```
 
 1. Use the  **▷**  button on the left of the cell to run it and wait for it to finish running. Note that it will take some time to start the Spark pool.
 2. Use the  **+ Code**  button to add a new cell to the notebook.
 3. Enter the following code in the new cell:
 
-CodeCopy
 
+```
 %%sql
 
 SELECT \* FROM`RetailDB`.`SalesOrder`WHERE SalesOrderId = 99999
+```
 
 1. Use the  **▷**  button on the left of the cell to run it and verify that a row for sales order 99999 was inserted into the  **SalesOrder**  table.
 2. Close the  **Notebook 1**  pane, stopping the Spark session and discarding your changes.
