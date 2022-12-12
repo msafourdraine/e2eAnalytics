@@ -1,11 +1,11 @@
 # E2E Analytics
-CTO Learning Days walkthrough for the End 2 End Analytics session 
+### CTO Learning Days walkthrough for the End 2 End Analytics session. 
 
-Analyze date from flat file with Lake Database
-Goal is to understand:
- what is a column oriented storage file
- what is an external table vs internal table
- what is the severless sql in synapse
+Goal of this Hands On Lab is to understand:
+ - what is a column oriented storage file
+ - what is an external table and an internal table
+ - what is ERD, Data Model and basic relations
+ - what is the severless sql in synapse
 
 ## Setup environement
 
